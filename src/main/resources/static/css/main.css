@@ -1,0 +1,44 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.header1 {
+    margin: 3rem 0;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 3rem auto;
+}
+
+.table .table__body {
+    font-size: .875rem;
+}
+
+.table .table__row {
+    transition: all .1s;
+}
+.table .table__row:hover {
+    background-color: #eee;
+}
+
+.table .table__row.table__row--head,
+.table .table__row.table__row--head:hover {
+    background-color: lightblue;
+    margin: 2rem 0 !important;
+    border: none;
+}
+
+.table .table__cell {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* DATATABLE OVERRIDES */
+
+.dataTables_wrapper .dataTables_info {
+    font-size: .875rem;
+    padding-top: 1rem;
+}

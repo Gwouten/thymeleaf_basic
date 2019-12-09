@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="|Student - ${student.voornaam} ${student.achternaam}|"></title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body th:object="${student}">
 
-<h2>Student</h2>
-<h1 th:text="|*{voornaam} *{achternaam}|"></h1>
+    <div class="page-container">
 
-<table class="table">
-    <tbody class="table__body">
-    <tr class="table__row">
-        <td class="table__cell">Voornaam:</td>
-        <td class="table__cell" th:text:="*{voornaam}"></td>
-    </tr>
-    </tbody>
-</table>
+        <h2 class="header2">Student</h2>
+        <h1 class="header1" th:text="|*{voornaam} *{achternaam}|"></h1>
+        <a th:href="@{/studenten}">Terug naar overzicht</a>
 
+        <table class="table">
+            <tbody class="table__body">
+            <tr class="table__row">
+                <td class="table__cell">Studentennummer:</td>
+                <td class="table__cell" th:text="*{studentennummer}"></td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Voornaam:</td>
+                <td class="table__cell" th:text="*{voornaam}"></td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Achternaam:</td>
+                <td class="table__cell" th:text="*{achternaam}"></td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Geboortedatum:</td>
+                <td class="table__cell" th:text="*{geboortedatum}"></td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Specialisatie:</td>
+                <td class="table__cell" th:text="*{specialistatie}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a th:href="@{/studenten}">Terug naar overzicht</a>
+
+    </div>
 </body>
 </html>
